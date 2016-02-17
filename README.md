@@ -41,6 +41,10 @@ stress-ng: info: [1] hdd              28023     15.06      0.00      0.92      1
 stress-ng: info: [1] switch        10512290     15.05      1.44      5.44    698329.59   1527949.13
 ```
 
+## Docker hub
+
+[Repository](https://hub.docker.com/r/lorel/docker-stress-ng/)
+
 ## License
 
 [MIT](LICENSE)
