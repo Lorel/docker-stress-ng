@@ -19,7 +19,7 @@ $ docker build -t stress-ng .
 Display usages :
 
 ```
-$ docker run -it stress-ng
+$ docker run -it --rm stress-ng
 stress-ng, version 0.03.11
 
 Usage: stress-ng [OPTION [ARG]]
@@ -30,7 +30,7 @@ Usage: stress-ng [OPTION [ARG]]
 Run stress workers :
 
 ```
-$ docker run -it stress-ng --cpu 4 --vm 2 --hdd 1 --fork 8 --switch 4 --timeout 15s --metrics-brief
+$ docker run -it --rm stress-ng --cpu 4 --vm 2 --hdd 1 --fork 8 --switch 4 --timeout 15s --metrics-brief
 stress-ng: info: [1] dispatching hogs: 4 cpu, 8 fork, 1 hdd, 4 switch, 2 vm
 stress-ng: info: [1] successful run completed in 15.13s
 stress-ng: info: [1] stressor      bogo ops real time  usr time  sys time   bogo ops/s   bogo ops/s
