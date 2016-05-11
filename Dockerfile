@@ -8,12 +8,12 @@ ENV VERSION 0.06.01
 RUN apt-get update && \
   apt-get install -yq $PACKAGES && \
   cd /root && \
-  wget http://kernel.ubuntu.com/~cking/tarballs/stress-ng/stress-ng-$VERSION.tar.gz && \
-  tar -xzf stress-ng-$VERSION.tar.gz && \
-  cd stress-ng-$VERSION/ && \
+  wget --no-check-certificate https://github.com/Lorel/stress-ng/archive/debug.tar.gz && \
+  tar -xzf debug.tar.gz && \
+  cd stress-ng-debug/ && \
   make install && \
   cd .. && \
-  rm -rfv stress-ng-$VERSION* && \
+  rm -rfv debug* stress-ng-debug && \
   apt-get autoremove --purge -yq $PACKAGES && \
   apt-get clean
 
